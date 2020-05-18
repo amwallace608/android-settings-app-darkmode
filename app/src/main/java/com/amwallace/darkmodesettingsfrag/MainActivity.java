@@ -48,9 +48,16 @@ public class MainActivity extends AppCompatActivity {
             //enable dark mode method, pass decorView of activity
             enableDarkMode(this.getWindow().getDecorView());
         } else {
-            //todo - enable light mode
+            //light mode enabled
+            enableLightMode(this.getWindow().getDecorView());
         }
     }
+
+    //enable light mode method - change background color
+    private void enableLightMode(View view) {
+        view.setBackgroundColor(getColor(R.color.lightModeBackground));
+    }
+
 //enable dark mode method - change background color
     private void enableDarkMode(View decorView) {
         //set background color

@@ -46,9 +46,17 @@ public class SecondFragment extends Fragment {
             //enable dark mode method, pass decorView of activity
             enableDarkMode(view);
         } else {
-
+            //light mode enabled
+            enableLightMode(view);
         }
     }
+
+    //enable light mode method - change background color
+    private void enableLightMode(View view) {
+        view.setBackgroundColor(getContext().getApplicationContext()
+                .getColor(R.color.lightModeBackground));
+    }
+
     //enable dark mode method - change background color
     private void enableDarkMode(View decorView) {
         //set background color

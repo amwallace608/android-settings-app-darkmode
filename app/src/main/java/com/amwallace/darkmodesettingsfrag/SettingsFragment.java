@@ -41,11 +41,19 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             //enable dark mode method, pass decorView of activity
             enableDarkMode(view);
         } else {
-
+            //dark mode disabled, use light mode
+            enableLightMode(view);
         }
 
         return view;
     }
+
+    //enable light mode method - change background color
+    private void enableLightMode(View view) {
+        view.setBackgroundColor(getContext().getApplicationContext()
+                .getColor(R.color.lightModeBackground));
+    }
+
     //enable dark mode method - change background color
     private void enableDarkMode(View decorView) {
         //set background color
